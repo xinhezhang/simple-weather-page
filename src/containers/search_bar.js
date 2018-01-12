@@ -34,7 +34,7 @@ class SearchBar extends Component {
             // by using "onFormSubmit" to prevent auto loading
             <form onSubmit={this.onFormSubmit} className="input-group">
                 <input
-                    placeholder="Find five-day forecast in your city"
+                    placeholder="City, Country"
                     className="form-control"
                     value={this.state.term}
                     onChange={this.onInputChange}

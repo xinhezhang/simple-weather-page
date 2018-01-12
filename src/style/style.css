@@ -40,3 +40,16 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+td, th {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+.input-group {
+    margin: 20px 0px;
+}
+
+svg {
+    height: 150px;
+}

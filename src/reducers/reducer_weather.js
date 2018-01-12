@@ -1,6 +1,13 @@
 import { FETCH_WEATHER } from '../actions/index';
 
 export default function (state = [], action) {
+    // handle error when user search nonexistent city
+    if (action.error) {
+        alert('City not exist, please try again!');
+        console.log('City not exist');
+        return state;
+    }
+
     //console.log('Action received ', action);
     switch (action.type) {
         case FETCH_WEATHER:

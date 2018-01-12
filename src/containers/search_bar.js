@@ -16,6 +16,7 @@ export default class SearchBar extends Component {
 
     render() {
         return (
+            // "form" will send html request to backend
             <form className="input-group">
                 <input
                     placeholder="Find five-day forecast in your city"

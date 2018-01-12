@@ -8,7 +8,7 @@ export default function (state = [], action) {
             // which should NEVER happen, since we do NOT change state directly (like using this.setState()).
             // This rule applies for both Redux and React!!!
             //return state.concat([ action.payload.data ]);
-            
+
             // same as above, using spread operator
             return [ action.payload.data, ...state ];
         default:

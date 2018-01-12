@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 
 // using function component since we did not need state
 export default (props) => {
@@ -7,6 +7,7 @@ export default (props) => {
         <div>
             <Sparklines svgHeight={120} svgWidth={180} data={props.data}>
                 <SparklinesLine color={props.color} />
+                <SparklinesReferenceLine type="avg" />
             </Sparklines>
         </div>
     );

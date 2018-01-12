@@ -21,10 +21,15 @@ class WeatherList extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        weather: state.weather,
-    };
+// function mapStateToProps(state) {
+//     return {
+//         weather: state.weather,
+//     };
+// }
+
+// same as above, but simpler in ES6 syntax
+function mapStateToProps({ weather }) {
+    return { weather };
 }
 
 export default connect(mapStateToProps)(WeatherList);

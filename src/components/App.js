@@ -11,6 +11,7 @@ export default class App extends Component {
         return (
             <div className="App">
                 <Header />
+                <h3 className="App-intro">Find five-day forecast in your city</h3>
                 <SearchBar />
                 <WeatherList />
             </div>

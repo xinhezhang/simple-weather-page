@@ -10,10 +10,13 @@ export function fetchWeather(city, country = 'us') {
     const url = `${ROOT_URL}q=${city},${country}&appid=${API_KEY}`;
     const request = axios.get(url);     // similar as jquery's AJAX, "request" is a Promise
 
-    console.log('Request: ', request);
+    //console.log('Request: ', request);
 
     return {
         type: FETCH_WEATHER,
+        // "request" us a Promise, when Redux see a Promise, "payload" become a Middleware,
+        // so it will stop the action until the Promise been resolved.
+        // Ex: console.log show Promise as "pending" when search
         payload: request,
     };
 }

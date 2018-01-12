@@ -13,11 +13,15 @@ export default class SearchBar extends Component {
             term: event.target.value,
         });
     }
+    onFormSubmit(event) {
+        event.preventDefault();
+    }
 
     render() {
         return (
-            // "form" will send html request to backend
-            <form className="input-group">
+            // "form" will auto send html request to backend
+            // by using "onFormSubmit" to prevent auto loading
+            <form onSubmit={this.onFormSubmit} className="input-group">
                 <input
                     placeholder="Find five-day forecast in your city"
                     className="form-control"

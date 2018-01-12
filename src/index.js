@@ -14,6 +14,8 @@ import reducers from "./reducers";
 // Middleware is a function that takes an action and depending on the action's type and payload.
 // It could choose to let action pass through, manipulate, log, or stop the action
 // before it reaches any reducer.
+//
+// Redux Promise is a Middleware
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 

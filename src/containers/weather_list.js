@@ -20,7 +20,7 @@ class WeatherList extends Component {
 
         // const lon = cityData.city.coords.lon;
         // const lat = cityData.city.coords.lat;
-        const { lon, lat } = cityData.city.coords;
+        const { lat, lon } = cityData.city.coord;
 
         return (
             <tr key={cityData.city.id}>

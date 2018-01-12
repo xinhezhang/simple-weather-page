@@ -8,7 +8,9 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function fetchWeather(city, country = 'us') {
     const url = `${ROOT_URL}q=${city},${country}&appid=${API_KEY}`;
-    const request = axios.get(url);     // similar as jquery's AJAX
+    const request = axios.get(url);     // similar as jquery's AJAX, "request" is a Promise
+
+    console.log('Request: ', request);
 
     return {
         type: FETCH_WEATHER,
